@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-medical-gray-900 font-inter;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-medical-blue hover:bg-medical-blue-dark text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-medical hover:shadow-medical-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-white hover:bg-medical-gray-50 text-medical-blue border-2 border-medical-blue font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-white text-white hover:bg-white hover:text-medical-blue font-semibold py-3 px-8 rounded-lg transition-all duration-300;
+  }
+  
+  .btn-green {
+    @apply bg-medical-green hover:bg-medical-green-dark text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+  }
+  
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .heading-primary {
+    @apply text-4xl lg:text-6xl font-bold text-medical-gray-900 leading-tight font-poppins;
+  }
+  
+  .heading-secondary {
+    @apply text-3xl lg:text-4xl font-bold text-medical-gray-900 mb-6 font-poppins;
+  }
+  
+  .heading-tertiary {
+    @apply text-2xl lg:text-3xl font-bold text-medical-gray-900 mb-4 font-poppins;
+  }
+  
+  .text-large {
+    @apply text-lg lg:text-xl text-medical-gray-600 leading-relaxed;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-medical-xl transition-all duration-300 transform hover:-translate-y-2 border border-medical-gray-100;
+  }
+  
+  .medical-card {
+    @apply bg-white rounded-2xl shadow-medical hover:shadow-medical-lg transition-all duration-300 p-8 border border-medical-gray-100;
+  }
+  
+  .gradient-overlay {
+    @apply absolute inset-0 bg-gradient-to-r from-medical-blue/90 to-medical-green/90;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-medical-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-medical-blue focus:border-transparent transition-all duration-200;
+  }
+  
+  .emergency-pulse {
+    @apply animate-pulse bg-red-500;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0066cc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #004499;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for better accessibility */
+.focus-visible:focus {
+  @apply outline-none ring-2 ring-medical-blue ring-offset-2;
+}
