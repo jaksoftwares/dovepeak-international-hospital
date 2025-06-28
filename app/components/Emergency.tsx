@@ -149,7 +149,7 @@ export default function Emergency() {
               <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4">
                 <div className="grid grid-cols-2 gap-4 text-center">
                   <div>
-                    <div className="text-2xl font-bold text-red-500">< 15 min</div>
+                    <div className="text-2xl font-bold text-red-500">{'< 15 min'}</div>
                     <div className="text-sm text-medical-gray-600">Avg Wait Time</div>
                   </div>
                   <div>

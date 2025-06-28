@@ -151,7 +151,7 @@ export default function Departments() {
               </p>
               <div className="grid grid-cols-2 gap-6 mb-8">
                 <div>
-                  <div className="text-3xl font-bold mb-2">< 15 min</div>
+                  <div className="text-3xl font-bold mb-2">{"< 15 min"}</div>
                   <div className="text-red-100">Average Wait Time</div>
                 </div>
                 <div>
