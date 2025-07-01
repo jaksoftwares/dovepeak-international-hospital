@@ -2,7 +2,6 @@ import React from 'react';
 import { Download, Mail, ArrowLeft } from 'lucide-react';
 import { Invoice } from '../types/invoice';
 import { format } from 'date-fns';
-import { generatePDF } from '../utils/pdfGenerator';
 
 interface InvoicePreviewProps {
   invoice: Invoice;
@@ -16,7 +15,7 @@ export const InvoicePreview: React.FC<InvoicePreviewProps> = ({
   onEmailSend 
 }) => {
   const handleDownloadPDF = async () => {
-    await generatePDF(invoice);
+    // await generatePDF(invoice);
   };
 
   const getTemplateStyles = () => {

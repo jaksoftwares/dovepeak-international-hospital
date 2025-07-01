@@ -7,7 +7,7 @@ import { EmailModal } from './components/EmailModal';
 import { Invoice } from './types/invoice';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import { sendInvoiceEmail } from './utils/emailService';
-import { generatePDF } from './utils/pdfGenerator';
+// import { generatePDF } from './utils/pdfGenerator';
 
 type AppView = 'create' | 'preview' | 'history';
 
@@ -46,7 +46,7 @@ function App() {
     setActiveTab('preview');
     // Small delay to ensure the component renders before generating PDF
     setTimeout(() => {
-      generatePDF(invoice);
+      // generatePDF(invoice);
     }, 100);
   };
 
