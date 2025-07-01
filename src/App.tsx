@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Header } from './components/Header';
-import { InvoiceForm } from './components/InvoiceForm';
 import { InvoicePreview } from './components/InvoicePreview';
 import { InvoiceHistory } from './components/InvoiceHistory';
 import { EmailModal } from './components/EmailModal';
@@ -75,8 +74,7 @@ function App() {
 
   const renderContent = () => {
     switch (activeTab) {
-      case 'create':
-        return <InvoiceForm onInvoiceCreate={handleInvoiceCreate} />;
+      
       case 'preview':
         return currentInvoice ? (
           <InvoicePreview
