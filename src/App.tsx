@@ -6,8 +6,6 @@ import { InvoiceHistory } from './components/InvoiceHistory';
 import { EmailModal } from './components/EmailModal';
 import { Invoice } from './types/invoice';
 import { useLocalStorage } from './hooks/useLocalStorage';
-import { sendInvoiceEmail } from './utils/emailService';
-// import { generatePDF } from './utils/pdfGenerator';
 
 type AppView = 'create' | 'preview' | 'history';
 
@@ -57,7 +55,8 @@ function App() {
 
   const handleSendEmail = async (emailData: { to: string; subject: string; message: string }) => {
     if (emailInvoice) {
-      const success = await sendInvoiceEmail(emailInvoice, emailData);
+      // const success = await sendInvoiceEmail(emailInvoice, emailData);
+      const success = false; // sendInvoiceEmail removed
       if (success) {
         // Update invoice status to 'sent'
         setInvoices(prev => 
