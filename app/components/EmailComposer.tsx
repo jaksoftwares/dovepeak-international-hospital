@@ -266,16 +266,16 @@ export default function EmailComposer() {
             
             <div className="space-y-2">
               <button className="w-full text-left p-2 bg-gray-50 hover:bg-gray-100 rounded text-sm">
-                {'{{firstName}}'} - First Name
+                {'{{firstName}} - First Name'}
               </button>
               <button className="w-full text-left p-2 bg-gray-50 hover:bg-gray-100 rounded text-sm">
-                {'{{lastName}}'} - Last Name
+                {'{{lastName}} - Last Name'}
               </button>
               <button className="w-full text-left p-2 bg-gray-50 hover:bg-gray-100 rounded text-sm">
-                {'{{company}}'} - Company
+                {'{{company}} - Company'}
               </button>
               <button className="w-full text-left p-2 bg-gray-50 hover:bg-gray-100 rounded text-sm">
-                {'{{email}}'} - Email Address
+                {'{{email}} - Email Address'}
               </button>
             </div>
           </div>
