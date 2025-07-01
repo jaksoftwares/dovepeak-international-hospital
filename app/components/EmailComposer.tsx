@@ -188,6 +188,7 @@ export default function EmailComposer() {
                 </div>
                 
                 <ReactQuill
+                  // @ts-expect-error: ReactQuill is dynamically imported and typed as any
                   theme="snow"
                   value={emailData.content}
                   onChange={(content) => setEmailData({...emailData, content})}
